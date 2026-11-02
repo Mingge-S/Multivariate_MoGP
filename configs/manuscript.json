@@ -1,0 +1,58 @@
+{
+  "data": {
+    "outcomes": ["sara_total", "mfars_total", "adl_total", "hpt_dom_av", "hpt_ndom_av"],
+    "outcome_labels": {
+      "sara_total": "SARA",
+      "mfars_total": "mFARS",
+      "adl_total": "ADL",
+      "hpt_dom_av": "9HPT-D",
+      "hpt_ndom_av": "9HPT-ND"
+    },
+    "id_col": "participant_id",
+    "time_col": "disease_duration",
+    "anchor_raw": 0.0,
+    "site_correction": true,
+    "site_col": "site",
+    "site_time_col": "visit",
+    "t_min": 0.0,
+    "t_max": 25.0
+  },
+  "gp": {
+    "anchor": "hard",
+    "slope_init": 0.05,
+    "slope_prior_sd": 0.35,
+    "kernel": "rbf",
+    "lengthscale_min": 4.0,
+    "lengthscale_init": null,
+    "lengthscale_prior": [4.0, 0.5],
+    "outputscale_init": null,
+    "outputscale_prior": [2.0, 2.0],
+    "task_rank": 1,
+    "task_factor_init_scale": 0.1,
+    "noise_min": 0.01,
+    "noise_init": null,
+    "learn_noise": true
+  },
+  "train": {
+    "n_iter": 100,
+    "lr": 0.01,
+    "lambda_mono": 15.0,
+    "lambda_smooth": 0.5,
+    "grid_min": 0.0,
+    "grid_max": 25.0,
+    "grid_points": 200,
+    "device": "auto",
+    "seed": 0
+  },
+  "mixture": {
+    "n_clusters": 4,
+    "max_em_iters": 50,
+    "min_cluster_size": 10,
+    "init_random_state": 0,
+    "allow_unassigned": true,
+    "trim_frac_per_cluster": 0.08,
+    "trim_min_cluster_size": 20,
+    "trim_abs_z_threshold": 1.5,
+    "max_unassigned_frac": 0.08
+  }
+}

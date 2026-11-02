@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mvmogp"
+version = "1.0.0"
+description = "Anchored multivariate mixture of Gaussian processes for longitudinal disease progression"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = [
+  "torch>=2.1",
+  "gpytorch>=1.11",
+  "linear_operator>=0.5",
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "scikit-learn>=1.3",
+  "matplotlib>=3.7",
+  "statsmodels>=0.14",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[tool.setuptools]
+packages = ["mvmogp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

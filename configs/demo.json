@@ -1,0 +1,27 @@
+{
+  "data": {
+    "outcomes": ["sara_total", "mfars_total", "adl_total", "hpt_dom_av", "hpt_ndom_av"],
+    "outcome_labels": {
+      "sara_total": "SARA",
+      "mfars_total": "mFARS",
+      "adl_total": "ADL",
+      "hpt_dom_av": "9HPT-D",
+      "hpt_ndom_av": "9HPT-ND"
+    },
+    "anchor_raw": 0.0,
+    "site_correction": true,
+    "t_max": 25.0
+  },
+  "gp": {
+    "anchor": "hard",
+    "kernel": "rbf",
+    "lengthscale_min": 4.0
+  },
+  "train": {
+    "n_iter": 100
+  },
+  "mixture": {
+    "n_clusters": 3,
+    "max_em_iters": 20
+  }
+}
